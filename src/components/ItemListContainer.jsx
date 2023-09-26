@@ -1,9 +1,12 @@
-import ItemCount from "./ItemCount"
+import ItemList from "./ItemList"
 
-const ItemListContainer = ({saludo}) => {
+const ItemListContainer = ({ saludo }) => {
   return (
-    <div className="container">{saludo}
-    <ItemCount />
+    <div>
+      <div className="d-flex justify-content-center">{saludo}</div>
+      <div >
+        <ItemList />
+      </div>
     </div>
   )
 }

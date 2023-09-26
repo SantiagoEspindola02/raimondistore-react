@@ -21,20 +21,22 @@ const ItemCount = () => {
     }
 
     return (
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="d-flex justify-content-center ">
                 {products.map((product) => (
                     <div key={product.id}>
-                        <h2>{product.name}</h2>
-                        {count >= 5 && <span>Has seleccionado todo el stock disponible!!</span>}
-                        <p disabled= {count === 5} >Cantidad elegida: {count}</p>
-                        <div>
-                            <button disabled={count === 0} onClick={decrement} className="btn btn-primary" type="button"> - </button>
-                            <button disabled={count === 5} onClick={increment} className="btn btn-primary" type="button"> + </button>
+                        <h2 className="d-flex justify-content-center m-3 ">{product.name}</h2>
+                        <div className="d-flex justify-content-center ">
+                            {count === product.stock && <span className="m-3">Has seleccionado todo el stock disponible!!</span>}
+                        </div>
+                        <div className="d-flex justify-content-center m-4 gap-4">
+                            <button disabled={count === 0} onClick={decrement} className="btn btn-primary " type="button"> - </button>
+                            <p >Cantidad elegida: {count}</p>
+                            <button disabled={count === product.stock} onClick={increment} className="btn btn-primary" type="button"> + </button>
                         </div>
 
                     </div>
                 ))}
-            
+             
             </div>
     )
 }
