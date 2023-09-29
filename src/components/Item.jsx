@@ -1,6 +1,7 @@
+import ItemCount from "./ItemCount"
 
 
-const Item = ({id, image, title, price}) => {
+const Item = ({id, image, title, price, stock}) => {
 
     return (
         <>
@@ -14,8 +15,11 @@ const Item = ({id, image, title, price}) => {
                 <div>
                     <p className="d-flex justify-content-center">${price}</p>
                 </div>
-                <div className="d-flex justify-content-center mb-2 p-2 ">
+                {/* <div className="d-flex justify-content-center mb-2 p-2 ">
                     <button className="btn btn-warning">Ir al detalle del producto</button>
+                </div> */}
+                <div>
+                    <ItemCount stock= {stock} />
                 </div>
             </div>
         </>

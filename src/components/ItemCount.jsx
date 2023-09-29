@@ -2,16 +2,17 @@
 
 
 import { useState } from "react"
-    const ItemCount = () => {
+
+    const ItemCount = ({stock}) => {
         const [products, setProducts] = useState([])
-    // const [count, setCount] = useState(0)
 
     const increment = (id) => {
         const newProducts = products.map((product) => {
-            if (product.id === id) {
+            if ((product.id === id) && (product.stock < stock)) {
                 return {
                     ...product,
-                    count: product.count + 1
+                    count: product.count + 1,
+                    stock: product.stock - 1
                 }
             }
             return product    
@@ -21,10 +22,11 @@ import { useState } from "react"
 
     const decrement = (id) => {
         const newProducts = products.map((product) => {
-            if (product.id === id) {
+            if ((product.id === id) && (product.stock <= stock )) {
                 return {
                     ...product,
-                    count: product.count - 1
+                    count: product.count - 1,
+                    stock: product.stock + 1
                 }
             }
             return product

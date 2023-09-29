@@ -76,7 +76,7 @@ const response = new Promise((resolve) => {
         resolve(products)
     }, 2000)  
 })
-                                     {/*CAMBIAR LA API POR PRODUCTOS Q CREE YO Y TERMINAR LA PROMESA*/ }    
+
 const ItemList = () => {
     const [products, setProducts] = useState([])
 
