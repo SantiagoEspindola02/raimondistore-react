@@ -1,6 +1,7 @@
+import ItemCount from "./ItemCount"
 
 
-const Item = ({id, image, title, price}) => {
+const ItemDetail = ({id, image, title, description, price, stock}) => {
 
     return (
         <>
@@ -11,15 +12,21 @@ const Item = ({id, image, title, price}) => {
                 <div>
                     <h2 className="d-flex justify-content-center m-3 text-center">{title}</h2>
                 </div>
+                <div className="d-flex justify-content-center">
+                    <h6 className="d-flex justify-content-center text-center m-2">{description}</h6>
+                </div>
                 <div>
                     <p className="d-flex justify-content-center">${price}</p>
                 </div>
+                <div>
+                    <p className="d-flex justify-content-center">Stock disponible: {stock}</p>
+                </div>
                 <div className="d-flex justify-content-center mb-2 p-2 ">
-                    <button className="btn btn-warning">Ir al detalle del producto</button>
+                    <ItemCount />
                 </div>
             </div>
         </>
     )
 }
 
-export default Item
+export default ItemDetail
