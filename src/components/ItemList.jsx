@@ -99,7 +99,7 @@ const ItemList = () => {
                         price={product.price}
                     />
                 ))}
-                {/* {products.map((product) =>(
+                {products.map((product) =>(
                     <ItemDetail
                         key= {product.id}
                         image={product.image}
@@ -108,7 +108,7 @@ const ItemList = () => {
                         price={product.price}
                         stock={product.stock} 
                     />
-                ))} */}
+                ))}
             </div>
         </>
     )

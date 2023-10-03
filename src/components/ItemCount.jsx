@@ -17,6 +17,10 @@ const ItemCount = ({ stock }) => {
         setCount(count - 1)
     }
 
+    const onAdd = () =>{
+        alert("Has comprado con exito este producto")
+    }
+
     return (
         <div className="d-flex justify-content-center flex-column ">
 
@@ -30,7 +34,7 @@ const ItemCount = ({ stock }) => {
                 <button disabled={count === stock} onClick={increment} className="btn btn-primary" type="button"> + </button>
             </div>
             <div>
-                <button>Agregar al carrito</button>
+                <button onClick = {onAdd} >Agregar al carrito</button>
             </div>
 
         </div>
