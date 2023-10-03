@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from "react"
 import Item from "./Item"
+import ItemDetail from "./ItemDetail"
 
 const products = [
     {
@@ -19,7 +20,7 @@ const products = [
         title: "Chomba 2",
         description: "Descripción del Producto 2",
         price: 29.99,
-        stock: 2,
+        stock: 5,
     },
     {
         id: 3,
@@ -35,7 +36,7 @@ const products = [
         title: "Pantalon 2",
         description: "Descripción del Producto 4",
         price: 39.99,
-        stock: 3,
+        stock: 7,
     },
     {
         id: 5,
@@ -43,7 +44,7 @@ const products = [
         title: "Sneaker 1",
         description: "Descripción del Producto 5",
         price: 39.99,
-        stock: 2,
+        stock: 8,
     },
     {
         id: 6,
@@ -59,7 +60,7 @@ const products = [
         title: "Abrigo 1",
         description: "Descripción del Producto 7",
         price: 39.99,
-        stock: 1,
+        stock: 7,
     },
     {
         id: 8,
@@ -67,7 +68,7 @@ const products = [
         title: "Abrigo 2",
         description: "Descripción del Producto 8",
         price: 39.99,
-        stock: 7,
+        stock: 6,
     },
 ]
 
@@ -95,11 +96,19 @@ const ItemList = () => {
                         key={product.id}
                         image={product.image}
                         title={product.title}
-                        description={product.description}
                         price={product.price}
-                        stock={product.stock}
                     />
                 ))}
+                {/* {products.map((product) =>(
+                    <ItemDetail
+                        key= {product.id}
+                        image={product.image}
+                        title={product.title}
+                        description={product.description}
+                        price={product.price}
+                        stock={product.stock} 
+                    />
+                ))} */}
             </div>
         </>
     )

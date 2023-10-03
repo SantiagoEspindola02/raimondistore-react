@@ -22,7 +22,7 @@ const ItemDetail = ({id, image, title, description, price, stock}) => {
                     <p className="d-flex justify-content-center">Stock disponible: {stock}</p>
                 </div>
                 <div className="d-flex justify-content-center mb-2 p-2 ">
-                    <ItemCount />
+                    <ItemCount stock= {stock} />
                 </div>
             </div>
         </>
