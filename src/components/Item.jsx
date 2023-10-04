@@ -15,7 +15,9 @@ const Item = ({id, image, title, price}) => {
                     <p className="d-flex justify-content-center">${price}</p>
                 </div>
                 <div className="d-flex justify-content-center mb-2 p-2 ">
-                    <button className="btn btn-warning">Ir al detalle del producto</button>
+                    <a href={/product/id}>
+                        <button className="btn btn-warning">Ir al detalle del producto</button>
+                    </a>
                 </div>
             </div>
         </>
