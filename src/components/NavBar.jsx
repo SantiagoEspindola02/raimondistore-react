@@ -18,6 +18,7 @@ const NavBar = () => {
               <CategoryItem  name = "Pantalones" />
             </li>
             <li className="nav-item">
+              
               <CategoryItem  name = "Sneackers" />
             </li>
             <li className="nav-item">

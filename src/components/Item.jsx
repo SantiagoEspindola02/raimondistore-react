@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 const Item = ({id, image, title, price}) => {
@@ -15,9 +16,9 @@ const Item = ({id, image, title, price}) => {
                     <p className="d-flex justify-content-center">${price}</p>
                 </div>
                 <div className="d-flex justify-content-center mb-2 p-2 ">
-                    <a href={/product/id}>
+                    <Link to = {`/product/${id}`}>
                         <button className="btn btn-warning">Ir al detalle del producto</button>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </>

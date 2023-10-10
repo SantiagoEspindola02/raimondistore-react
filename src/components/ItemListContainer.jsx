@@ -5,6 +5,7 @@ import Item from "./Item"
 
 const ItemListContainer = ({ saludo }) => {
   const [products, setProducts] = useState([])
+  
   useEffect(() => {
     getProducts()
     .then((data) => setProducts(data))

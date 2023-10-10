@@ -76,11 +76,11 @@ export const getProducts = () => {
     })
 }
 
-export const getProductsById = (productId) => {
+export const getProductById = (productId) => {
     return new Promise((resolve) => {
         setTimeout(() =>{
-            resolve(products.find((product) => (product.id === productId)))
-        },2000)
+            resolve(products.find((product) => (product.id == productId)))
+        },3000)
         
     })
 

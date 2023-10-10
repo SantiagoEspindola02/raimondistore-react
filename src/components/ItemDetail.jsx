@@ -1,11 +1,11 @@
 import ItemCount from "./ItemCount"
 
 
-const ItemDetail = ({id, image, title, description, price, stock}) => {
+const ItemDetail = ({ image, title, description, price, stock}) => {
 
     return (
         <>
-            <div className="d-flex justify-content-center flex-column p-6" style={{maxWidth: "600px", backgroundColor:"grey", borderRadius:"20px"}} key={id}>
+            <div className="d-flex justify-content-center flex-column p-6" style={{maxWidth: "600px", backgroundColor:"grey", borderRadius:"20px"}}>
                 <div className="d-flex justify-content-center">
                     <img className="mt-4 p-3" style={{ borderRadius:"30px", width: "200px", height:"200px"}} src={image} alt="image" />
                 </div>
