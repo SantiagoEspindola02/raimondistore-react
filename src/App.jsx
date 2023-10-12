@@ -15,7 +15,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route exact path= '/' element={<ItemListContainer saludo="BIENVENIDOS A MI E-COMMERCE" />} />
-        <Route exact path='/product/:id' element={<ItemDetailContainer />} />
+        <Route exact path='/product/:productId' element={<ItemDetailContainer />} />
 
       </Routes>
     </BrowserRouter>
