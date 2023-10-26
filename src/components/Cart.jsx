@@ -1,12 +1,8 @@
-import { useContext } from "react"
-import { CartContext } from "../context/cartContext"
 
 
 const Cart = ({ id, image, title, price }) => {
 
-    const CartInfoContext = useContext(CartContext)
-    console.log(CartInfoContext)
-
+   
     return (
         <div className="d-flex justify-content-center flex-column p-6" style={{ maxWidth: "600px", backgroundColor: "grey", borderRadius: "20px" }} key={id}>
             <div className="d-flex justify-content-center">

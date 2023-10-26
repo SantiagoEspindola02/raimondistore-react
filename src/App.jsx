@@ -13,16 +13,16 @@ function App() {
   return (
 
     <div>
-      <BrowserRouter>
-        <CartContextProvider>
+      <CartContextProvider>
+        <BrowserRouter>
           <NavBar />
           <Routes>
             <Route exact path='/' element={<ItemListContainer saludo="BIENVENIDOS A MI E-COMMERCE" />} />
             <Route exact path='/product/:productId' element={<ItemDetailContainer />} />
-            <Route exact path='/cart' element={< Cart />} />
+            <Route exact path='/cart' element={<Cart />} />
           </Routes>
-        </CartContextProvider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </CartContextProvider>
     </div>
   )
 }
