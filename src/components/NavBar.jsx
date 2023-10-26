@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Brand from "./Brand"
 import CartContainer from "./CartContainer"
 import CategoryItem from "./CategoryItem"
@@ -8,6 +9,9 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <Brand />
+        <Link to = {`/cart`}>
+          <CartContainer />
+        </Link>
         <MenuButton />
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -26,7 +30,6 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <CartContainer />
       </div>
     </nav>
   )

@@ -1,6 +1,7 @@
 import { getProducts } from "../data/dataProducts"
 import { useEffect, useState } from "react"
 import Item from "./Item"
+import Cart from "./CartContainer"
 
 
 const ItemListContainer = ({ saludo }) => {
@@ -22,6 +23,13 @@ const ItemListContainer = ({ saludo }) => {
           image={product.image}
           title={product.title}
           price={product.price}
+          id= {product.id}
+        />))}
+        {products.map((product) => (<Cart
+        key={product.id}
+        image={product.image}
+        title={product.title}
+        price={product.price}
         />))}
       </div>
     </div>
