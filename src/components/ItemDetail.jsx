@@ -1,15 +1,18 @@
 import { useContext } from "react"
 import ItemCount from "./ItemCount"
 import { CartContext } from "../context/cartContext"
-import { Link } from "react-router-dom"
+//import { Link } from "react-router-dom"
 
 
 const ItemDetail = ({ item }) => {
 
     const { addToCart } = useContext(CartContext)
-    const onAdd = () => {
-        addToCart(item)
+    
+    const onAdd = (quantity) => {
+
+        addToCart({item,quantity})
     }
+    
     return (
         <>
             <div className="d-flex justify-content-center flex-column p-6" style={{ maxWidth: "600px", backgroundColor: "grey", borderRadius: "20px" }}>
@@ -29,10 +32,8 @@ const ItemDetail = ({ item }) => {
                     <p className="d-flex justify-content-center">Stock disponible: {item.stock}</p>
                 </div>
                 <div className="d-flex justify-content-center mb-2 p-2 ">
-                    <ItemCount stock={item.stock} />
-                    <Link to={`/cart`}>
-                        <button onClick={onAdd(item)} >Agregar al carrito</button>
-                    </Link>
+                    <ItemCount stock={item.stock} onAdd={onAdd} />  
+                    {/* <Link to={`/cart`}>Ir al carrito</Link>  */}
                 </div>
             </div>
         </>

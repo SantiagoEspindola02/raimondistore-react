@@ -4,8 +4,9 @@ import { createContext, useState } from "react";
 export const CartContext = createContext ()
 export const CartContextProvider =  ({children}) => {
     const [cart, setCart] = useState([])
-    const addToCart = (item) => {  //      item, qty             implementa la funcionalidad para agregar un producto al carrito
-        setCart([...cart, {...item}])
+    console.log(cart)
+    const addToCart = (item, quantity) => {  //      item, qty             implementa la funcionalidad para agregar un producto al carrito
+        setCart([...cart, {...item, quantity}])
     }
     const removeList = () => {
         setCart([])
