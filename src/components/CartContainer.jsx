@@ -5,7 +5,7 @@ import CartNumber from "./CartNumber"
 const CartContainer = () => {
   return (
     <div>
-        <CartNumber count={5} />
+        <CartNumber />
         <CartIcon color="cyan" />
     </div>
   )

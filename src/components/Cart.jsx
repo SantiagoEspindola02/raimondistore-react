@@ -17,6 +17,7 @@ const Cart = ({ id, image, title, price }) => {
             <div className="d-flex justify-content-center mb-2 p-2 ">
             </div>
         </div>
+        
     )
 
 }

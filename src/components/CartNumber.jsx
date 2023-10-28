@@ -1,7 +1,12 @@
+import { useContext } from "react"
+import { CartContext } from "../context/cartContext"
 
-const CartNumber = ({count}) => {
+const CartNumber = () => {
+
+  const {cartQuantity} = useContext(CartContext)
+
   return (
-    <span style={{fontSize: "10px"}}>{count}</span>
+    <span style={{fontSize: "10px"}}>{cartQuantity()}</span>
   )
 }
 
