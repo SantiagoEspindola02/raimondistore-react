@@ -10,7 +10,7 @@ const ItemDetail = ({ item }) => {
     
     const onAdd = (cantidad) => {
 
-        addToCart({...item, cantidad})
+        addToCart(item, cantidad)
     }
     
     return (
@@ -33,7 +33,6 @@ const ItemDetail = ({ item }) => {
                 </div>
                 <div className="d-flex justify-content-center mb-2 p-2 ">
                     <ItemCount stock={item.stock} onAdd={onAdd} />  
-                    {/* <Link to={`/cart`}>Ir al carrito</Link>  */}
                 </div>
             </div>
         </>

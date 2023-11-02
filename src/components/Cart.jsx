@@ -1,23 +1,29 @@
+import { useContext } from "react"
+import { CartContext } from "../context/cartContext"
+import { Link } from "react-router-dom"
+import CartItem from "./CartItem"
 
 
-const Cart = ({ id, image, title, price }) => {
+const Cart = () => {
 
-   
+    const { cart, removeList, total } = useContext(CartContext)
+
     return (
-        <div className="d-flex justify-content-center flex-column p-6" style={{ maxWidth: "600px", backgroundColor: "grey", borderRadius: "20px" }} key={id}>
-            <div className="d-flex justify-content-center">
-                <img className="mt-4 p-3" style={{ borderRadius: "30px", width: "200px", height: "200px" }} src={image} alt="image" />
+        <div>
+
+            {cart.length ? <div>
+                {cart.map((product) => <CartItem key={product.id} product={product} />)}
+                <p>Total a pagar: ${total()}</p>
+                <button className="btn btn-danger" onClick={removeList}>Vaciar carrito</button>
+                <Link className="btn btn-dark">Finalizar tu compra</Link>
             </div>
-            <div>
-                <h2 className="d-flex justify-content-center m-3 text-center">{title}</h2>
-            </div>
-            <div>
-                <p className="d-flex justify-content-center">${price}</p>
-            </div>
-            <div className="d-flex justify-content-center mb-2 p-2 ">
-            </div>
+                : <div>
+                    <h3>No has añadido productos en tu carrito</h3>
+                    <Link to={"/"} className="btn btn-dark">Ir a comprar</Link>
+                </div>
+            }
         </div>
-        
+
     )
 
 }

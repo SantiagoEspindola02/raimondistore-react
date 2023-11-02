@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom"
+
 const Brand = () =>{
-    return (<a className="navbar-brand"     href="#">RaimondiStore
-    </a>
+    return (<Link to={`/`} style={{textDecoration:'none', textDecorationColor:'none'}}>RaimondiStore
+    </Link>
     )
 }
 
