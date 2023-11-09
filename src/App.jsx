@@ -17,9 +17,10 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route exact path='/' element={<ItemListContainer saludo="BIENVENIDOS A MI E-COMMERCE" />} />
-            <Route exact path='/product/:productId' element={<ItemDetailContainer />} />
-            <Route exact path='/cart' element={<Cart />} />
+            <Route exact path ='/' element={<ItemListContainer saludo="BIENVENIDOS A MI E-COMMERCE" />} />
+            <Route exact path ='/product/:productId' element={<ItemDetailContainer />} />
+            <Route exact path ='/category/:category' element = {<ItemListContainer />} />
+            <Route exact path ='/cart' element={<Cart />} />
           </Routes>
         </BrowserRouter>
       </CartContextProvider>
